@@ -10,3 +10,8 @@ jdk:
 script:
   - ./gradlew assemble
   - ./gradlew test
+  - ./gradlew sonarqube \
+      -Dsonar.projectKey=projektMleko_mcv-test \
+      -Dsonar.organization=projektmleko-github \
+      -Dsonar.host.url=https://sonarcloud.io \
+      -Dsonar.login=$SONAR_API_KEY
